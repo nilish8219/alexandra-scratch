@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scratch & Win</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎰 Scratch & Win</h1>
+
+<p>Tap the button below to reveal today's prize.</p>
+
+<a href="#" class="button" onclick="playGame()">
+SCRATCH NOW
+</a>
+
+<p id="result" style="margin-top:40px;font-size:28px;font-weight:bold;"></p>
+
+</div>
+
+<script>
+function playGame(){
+
+let random=Math.random()*100;
+
+let message="";
+
+if(random<75){
+
+message="😔 Better Luck Next Time!";
+
+}else if(random<85){
+
+message="☕ You Won a FREE Coffee!";
+
+}else if(random<92){
+
+message="🍟 You Won FREE Fries!";
+
+}else if(random<97){
+
+message="🍺 You Won a FREE Beer!";
+
+}else{
+
+message="🍔 You Won a FREE Appetizer!";
+
+}
+
+document.getElementById("result").innerHTML=message;
+
+}
+</script>
+
+</body>
+</html>
